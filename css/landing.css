@@ -1,0 +1,584 @@
+/* ============================================================
+   UNCOUTH — home / landing page styles — DRAFT.
+   Adapted from FHBP's landing.css pattern (same design DNA).
+   Lives in working/issues/home/ until promoted to home/.
+   ============================================================ */
+
+:root {
+    --bg: #F2F2F2;
+    --ink: #101010;
+    --rule: #e1e1e1;
+    --mute: #808080;
+    --accent: #8b0a0a;        /* blood-red — leans into mordant register */
+    --accent-alt: #0099ff;    /* FHBP cyan — available if we revert */
+    --font-pixel: 'Rubik Mono One', 'Courier New', monospace;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --font-serif: 'EB Garamond', 'Georgia', serif;
+    --pad-x: 2rem;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   TOPBAR
+   ============================================================ */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem var(--pad-x);
+    border-bottom: 1px solid var(--ink);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.topbar__left {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.topbar__brand {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.topbar__tagline {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    white-space: nowrap;
+}
+
+.topbar__links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar__links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.topbar__links a:hover,
+.topbar__links a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    outline: none;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem var(--pad-x);
+}
+
+.hero__cover {
+    flex: 0 1 auto;
+    max-width: 48%;
+}
+
+.hero__words {
+    flex: 0 1 auto;
+    text-align: left;
+    padding-top: 0.5rem;
+    max-width: 50%;
+}
+
+.wordmark {
+    font-family: var(--font-pixel);
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.4rem;
+}
+
+.pronounce {
+    font-family: var(--font-mono);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--mute);
+    margin-bottom: 1.2rem;
+}
+
+.sub {
+    font-family: var(--font-pixel);
+    font-size: clamp(0.8rem, 1.6vw, 1rem);
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* ============================================================
+   COVER PLACEHOLDER (used in hero and feature — no real images yet)
+   ============================================================ */
+
+.cover-placeholder {
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    aspect-ratio: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    filter: grayscale(100%);
+}
+
+.cover-placeholder--wide {
+    aspect-ratio: 16 / 9;
+}
+
+.cover-placeholder__kicker {
+    font-family: var(--font-pixel);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.cover-placeholder__no {
+    font-family: var(--font-pixel);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cover-placeholder__lorem {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+.cover-placeholder__note {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: auto;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+main {
+    flex: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.5rem var(--pad-x) 5rem;
+}
+
+.section-name {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    margin-bottom: 2.5rem;
+}
+
+.label {
+    font-family: var(--font-pixel);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   FEATURED HIT PIECE
+   ============================================================ */
+
+.feature {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--ink);
+}
+
+.feature__media {
+    display: block;
+    margin-bottom: 2rem;
+    border: 1px solid var(--ink);
+}
+
+.feature__media .cover-placeholder {
+    aspect-ratio: 16 / 9;
+}
+
+.feature__title {
+    font-family: var(--font-pixel);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.feature__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.feature__title a:hover {
+    color: var(--accent);
+}
+
+.feature__line {
+    font-size: 1rem;
+    margin: 0 auto 2rem;
+    max-width: 60ch;
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.6rem 1.2rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+    background: var(--ink);
+    color: var(--bg);
+}
+
+/* ============================================================
+   ISSUES GRID
+   ============================================================ */
+
+.issues {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 4rem;
+}
+
+.issues__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.issues__main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.issues__latest {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+}
+
+.issues__latest:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.issues__meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 0.5rem;
+}
+
+.issues__title {
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.issues__latest:hover .issues__title {
+    color: var(--accent);
+}
+
+.issues__line {
+    font-size: 0.95rem;
+}
+
+.issues__rail {
+    border-left: 1px solid var(--ink);
+    padding-left: 2.5rem;
+}
+
+.issues__back {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.issues__back li {
+    border-top: 1px solid var(--rule);
+}
+
+.issues__back li:first-child {
+    border-top: none;
+}
+
+.issues__back a {
+    display: block;
+    padding: 0.8rem 0;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.issues__back a:hover {
+    color: var(--accent);
+}
+
+/* Retracted issue styling (strikethrough + chip) */
+.issues__back--retracted a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.issues__back__strike {
+    text-decoration: line-through;
+    color: var(--mute);
+}
+
+.issues__back__chip {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.15rem 0.5rem;
+}
+
+/* ============================================================
+   MANIFESTO PANEL (new — not in FHBP)
+   ============================================================ */
+
+.manifesto {
+    max-width: 680px;
+    margin: 0 auto 4rem;
+    padding: 2.5rem 2.5rem;
+    border: 1px solid var(--ink);
+    text-align: center;
+}
+
+.manifesto__body {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+}
+
+.manifesto__body em {
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.manifesto__body strong {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.manifesto__signoff {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mute);
+}
+
+/* ============================================================
+   MAILING LIST
+   ============================================================ */
+
+.subscribe {
+    border-top: 1px solid var(--ink);
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+}
+
+.subscribe__heading {
+    font-family: var(--font-pixel);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.8rem;
+}
+
+.subscribe__body {
+    font-size: 0.9rem;
+    max-width: 60ch;
+    margin-bottom: 1.2rem;
+}
+
+.subscribe__placeholder {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--mute);
+    border: 1px dashed var(--mute);
+    padding: 1rem 1.5rem;
+    letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   FOOTER — compact, light-background (matches FHBP)
+   ============================================================ */
+
+.footer {
+    border-top: 1px solid var(--ink);
+    padding: 1.1rem var(--pad-x);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.footer a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.footer__satire {
+    order: 1;
+    flex: 0 0 100%;
+    margin: 0;
+    font-size: 0.6rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--mute);
+}
+
+.footer__satire strong {
+    color: var(--ink);
+}
+
+.footer__meta {
+    display: contents;
+}
+
+.footer__copyright {
+    color: var(--mute);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer__links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__links a {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 760px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero__cover,
+    .hero__words {
+        max-width: 100%;
+        text-align: center;
+    }
+    .issues__grid {
+        grid-template-columns: 1fr;
+    }
+    .issues__rail {
+        border-left: none;
+        border-top: 1px solid var(--ink);
+        padding-left: 0;
+        padding-top: 2rem;
+        margin-top: 1rem;
+    }
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .topbar__links {
+        gap: 1rem;
+    }
+}

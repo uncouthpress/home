@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UNCOUTH. Published by Uncouth Press. Film criticism from the sticky-floor crowd.">
+    <title>UNCOUTH</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Rubik+Mono+One&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+    <!--
+        UNCOUTH landing page — DRAFT.
+        Pattern mirrors FHBP (topbar → hero → main → footer).
+        All content below is Lorem Ipsum placeholder; real content pending.
+        Styles in css/landing.css.
+    -->
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+    <!-- =================== TOPBAR =================== -->
+    <header class="topbar" aria-label="Site top bar">
+        <div class="topbar__left">
+            <a class="topbar__brand" href="index.html">UNCOUTH PRESS</a>
+            <p class="topbar__tagline">· INDIE FILM CRITICISM</p>
+        </div>
+        <ul class="topbar__links">
+            <li><a href="#">INSTAGRAM</a></li>
+            <li><a href="#">X</a></li>
+            <li><a href="#">BLUESKY</a></li>
+            <li><a href="#">LETTERBOXD</a></li>
+            <li><a href="mailto:uncouthpress@gmail.com">EMAIL</a></li>
+        </ul>
+    </header>
+
+    <!-- =================== HERO =================== -->
+    <section class="hero" aria-label="UNCOUTH">
+        <div class="hero__cover">
+            <div class="cover-placeholder">
+                <p class="cover-placeholder__kicker">UNCOUTH</p>
+                <p class="cover-placeholder__no">No. 1</p>
+                <p class="cover-placeholder__lorem">Lorem Ipsum Dolor</p>
+                <p class="cover-placeholder__note">[cover image placeholder]</p>
+            </div>
+        </div>
+        <div class="hero__words">
+            <h1 class="wordmark">UNCOUTH</h1>
+            <p class="pronounce">/ʌnˈkuːθ/</p>
+            <p class="sub">Indie Film criticism, allegedly</p>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- =================== THIS ISSUE: FEATURED PIECE =================== -->
+        <!--
+            The Featured Piece can be from ANY section — not locked to Hit Piece.
+            The label below should match the section the piece comes from:
+            "Hit Piece" | "Two Cents" | "The Back Row" | "The Peanut Gallery" |
+            "Chump Change" | "The Can"
+            Draft example uses Hit Piece as the default/most-common case.
+            See ../../format-prompts/landing-page.md for the editorial rule.
+        -->
+        <h2 class="section-name">This Issue</h2>
+
+        <section class="feature" aria-label="Featured piece from current issue">
+            <p class="label">Hit Piece</p>
+            <a class="feature__media" href="#">
+                <div class="cover-placeholder cover-placeholder--wide">
+                    <p class="cover-placeholder__kicker">FEATURED PIECE IMAGE PLACEHOLDER</p>
+                    <p class="cover-placeholder__lorem">16:9 aspect ratio, grayscale</p>
+                </div>
+            </a>
+            <h2 class="feature__title"><a href="#">DOLOR SIT AMET: The Case Against Adipiscing Elit</a></h2>
+            <p class="feature__line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Allegedly.</p>
+            <a class="btn" href="#">READ IN FULL</a>
+        </section>
+
+        <!-- =================== ISSUES =================== -->
+        <section class="issues" aria-label="UNCOUTH issues">
+            <h2 class="section-name">Issues</h2>
+
+            <div class="issues__grid">
+                <div class="issues__main">
+                    <a class="issues__latest" href="#">
+                        <p class="issues__meta">No. 5 &middot; Lorem Ipsum &middot; October 2026</p>
+                        <h3 class="issues__title">Ut Enim Ad Minim Veniam</h3>
+                        <p class="issues__line">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                    </a>
+                    <a class="issues__latest" href="#">
+                        <p class="issues__meta">No. 4 &middot; Lorem Ipsum &middot; September 2026</p>
+                        <h3 class="issues__title">Excepteur Sint Occaecat Cupidatat</h3>
+                        <p class="issues__line">Non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus.</p>
+                    </a>
+                    <a class="issues__latest" href="#">
+                        <p class="issues__meta">No. 3 &middot; Lorem Ipsum &middot; August 2026</p>
+                        <h3 class="issues__title">Error Sit Voluptatem Accusantium</h3>
+                        <p class="issues__line">Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+                    </a>
+                </div>
+                <aside class="issues__rail">
+                    <p class="label">Back Issues</p>
+                    <ul class="issues__back">
+                        <li class="issues__back--retracted">
+                            <a href="#">
+                                <span class="issues__back__strike">No. 2 &middot; Nemo Enim Ipsam Voluptatem</span>
+                                <span class="issues__back__chip">Retraction Note</span>
+                            </a>
+                        </li>
+                        <li><a href="#">No. 1 &middot; Lorem Ipsum Dolor</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- =================== MANIFESTO PANEL =================== -->
+        <section class="manifesto" aria-label="About UNCOUTH">
+            <p class="manifesto__body">
+                From Old English <em>uncūth</em>, meaning unknown or obscure. Later, through
+                centuries of use, the word drifted to mean awkward, unrefined, impolite.
+                <strong>We hold both meanings.</strong> We cover the films nobody's heard of,
+                with the manners we can afford.
+            </p>
+            <p class="manifesto__signoff">— Uncouth Press, allegedly</p>
+        </section>
+
+        <!-- =================== MAILING LIST =================== -->
+        <div class="subscribe" aria-label="Mailing list sign-up">
+            <h2 class="subscribe__heading">Subscribe to UNCOUTH</h2>
+            <p class="subscribe__body">New issues delivered to your inbox. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="subscribe__placeholder">[Beehiiv signup form placeholder — embed script goes here]</p>
+        </div>
+
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer class="footer" aria-label="Site footer">
+        <p class="footer__satire">
+            <strong>Note:</strong> UNCOUTH publishes criticism, opinion, editorial commentary, and satire on publicly released films and media. Each section is identified by its editorial posture: reviews are opinion, Allegedly is speculation and satire, Hit Pieces are critical commentary. Use of names, titles, and trademarks is nominative &mdash; for identification and commentary only &mdash; and implies no affiliation. Read each section as what it says it is.
+        </p>
+        <div class="footer__meta">
+            <span class="footer__copyright">&copy; Uncouth Press</span>
+            <ul class="footer__links">
+                <li><a href="#">INSTAGRAM</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="#">BLUESKY</a></li>
+                <li><a href="#">LETTERBOXD</a></li>
+                <li><a href="mailto:uncouthpress@gmail.com">EMAIL</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
